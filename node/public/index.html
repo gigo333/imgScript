@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <link rel='stylesheet' href='index.css'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ImageScript</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="socket.io.js"></script>
+    <script src='index.js'></script>
+</head>
+<body>
+    <div id="dynObj"></div>
+    <div class="centered" id="showDiv" >
+        <div class="dropzone" id="pngDropDiv">
+            <div class="container">Drop here the png appImage
+                <input type="file" id="sendPng" name="myfile">
+                <button onclick="sendShow()">Upload</button>
+            </div>
+        </div>
+        <div class="btnDiv">
+            <button onclick="hidePanel()" style="margin-left: 10px;">Hide</button>
+        </div>     
+    </div>
+    <div class="centered" id="hideDiv" style="visibility: hidden;">
+        <div class="hAlign">
+            <div class="dropzone" id="imgDropDiv">
+                <div class="container">Drop here the image
+                    <input type="file" id="sendImg" name="myfile">
+                </div>
+            </div> 
+            <div class="dropzone" id="scriptDropDiv">
+                <div class="container">Drop here the js script
+                    <input type="file" id="sendScript" name="myfile">
+                </div>
+            </div>
+        </div> 
+        <div class="btnDiv">
+            <button onclick="sendHide()" style="margin-right: 10px;">Upload</button>
+            <span></span>
+            <button onclick="showPanel()" style="margin-left: 10px;">Show</button>
+        </div>
+    </div>
+    
+
+</body>
+</html>
